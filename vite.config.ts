@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Required for Vercel deployment — produces Vercel serverless-compatible output
+  // instead of the default cloudflare-module preset.
+  nitro: {
+    preset: "vercel",
+  },
 });
